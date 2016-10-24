@@ -1,0 +1,14 @@
+use strict;
+use warnings;
+
+$|=1;
+
+sub main {
+
+	my $output = '>output.txt';
+	open(OUTPUT, $output) or die("Cant create $output.\n");
+	close(OUTPUT);
+	
+}
+
+main();

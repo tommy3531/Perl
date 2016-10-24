@@ -1,0 +1,84 @@
+use strict;
+use warnings;
+
+$|=1;
+
+sub main {
+
+	# string literal 
+	my $file = '/Users/tommarler/Desktop/dictionaryFolder/dict2.txt';
+	
+	# open() File in Perl
+	# or in Perl
+	open(INPUT, $file) or die("Input file $file not found.");
+	
+	#Read from file
+	while(my $line = <INPUT>) {
+	
+		# RegEx in Perl
+		if($line =~ /l/) {
+			print $line;
+		}
+
+	}
+	# die in Perl
+	# die "Input file $file not found.";
+	
+	close(INPUT);
+
+}
+
+main();
+
+###################### open() File in Perl #############################################################
+#
+#  open(FILE HANDLER, filename);
+#	- FILE HANDLER - way to refer to file, perl convention all UPPERCASE  
+#########################################################################################################
+
+###################### close() File in Perl #############################################################
+#
+#  close(FILE HANDLER);
+#	- FILE HANDLER - way to refer to file, perl convention all UPPERCASE 
+#########################################################################################################
+
+###################### die in Perl #####################################################################
+#
+#   die " Your Message ";
+#	Nothing will run below die
+#     
+#
+#########################################################################################################
+
+###################### or in Perl #####################################################################
+#
+#	open(INPUT, $file) or die("Input file $file not found.");
+#		- First it is trying to evaluate the whole line. If open() is true, the whole line is true.
+#		- If true runs close() if false runs die();
+#     
+#
+#########################################################################################################
+
+###################### Read from File in Perl ###########################################################
+#
+#	while(my $line = <INPUT>) {
+#
+#	}
+#
+#	<INPUT> - Reads one line from the file and returns it to the $line variable.
+#	my $line - Holds read line from file
+#   while - Reads until no line can be returned
+#
+#########################################################################################################
+
+###################### RegEx in Perl ###########################################################
+#
+#	if($line =~ /l/) {
+#		print $line;
+#	}
+#
+#   if the line matches egg print the line
+#   =~ /match me/ - Checks to see if match me is in the line, performs a match
+#   / egg / - add space to search for only word
+#
+#########################################################################################################

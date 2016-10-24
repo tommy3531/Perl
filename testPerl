@@ -1,0 +1,39 @@
+use strict;
+use warnings;
+
+###################### Arrays in Perl #################################################################
+#
+#  my @ name = (
+#               'each',
+#               'item',
+#               'can have',
+#               'a',
+#  );
+#  
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#########################################################################################################
+
+
+sub main {
+
+	my $searchFile = '/Users/tommarler/Desktop/images/mario.jpg';
+	
+	if(-f $searchFile) {
+		
+		print "Found File: $searchFile\n";
+	}
+	else {
+		
+		print "File not found: $searchFile\n";
+	}
+}
+
+main();
